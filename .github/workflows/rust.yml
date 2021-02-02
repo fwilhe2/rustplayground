@@ -19,10 +19,9 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
     - name: Run install
-      run: cargo install --path .
-
+      run: cargo install --verbose --path .
 
     - name: Run as shell
       run: |
-        abc
+        >>>++
       shell: rustplayground {0}
