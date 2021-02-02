@@ -16,15 +16,25 @@ fn main() {
     let mut index = 0;
 
     for c in contents.chars() {
-        println!("{}", c);
+        println!("{} {}", c, index);
 
         if c == '>' {
-           index = index + 1;
-           memory.push(0);
+           index += 1;
+           if memory.len() < index {
+            memory.push(0);
+           }
         }
 
+        if c == '<' {
+            index -= 1;
+         }
+
         if c == '+' {
-            memory[index - 1] = memory[index - 1] + 1
+            memory[index - 1] += 1;
+        }
+
+        if c == '-' {
+            memory[index - 1] -= 1;
         }
 
         println!("{:#?}", memory);
