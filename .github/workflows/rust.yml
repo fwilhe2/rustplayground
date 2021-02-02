@@ -19,7 +19,7 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
     - name: Run install
-      run: cargo install --verbose
+      run: cargo install --path .
 
 
     - name: Run as shell
