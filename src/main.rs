@@ -1,15 +1,8 @@
+use std::env;
+
 fn main() {
-    for i in 1..3 {
-        println!("Hello, world! {}", invert(i));
+    let args: Vec<String> = env::args().collect();
+    let filename = &args[1];
 
-    }
-}
-
-fn invert(i: i32) -> i32 {
-    return -i
-}
-
-
-fn invert2(i: f64) -> f64 {
-    return -i
+    println!("file: {}", filename);
 }
